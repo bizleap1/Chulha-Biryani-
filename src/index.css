@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-bg: #0D0D0D;
+  --color-primary: #FF6A00;
+  --color-secondary: #D4AF37;
+  --color-text: #F2F2F2;
+  --color-text-muted: #A0A0A0;
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-impact: 'Bebas Neue', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Fire Glow Animation */
+@keyframes fire-glow {
+  0% { box-shadow: 0 0 5px rgba(255, 106, 0, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(255, 106, 0, 0.9), 0 0 40px rgba(212, 175, 55, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(255, 106, 0, 0.5); }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), #E65C00);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  animation: fire-glow 2s infinite;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #E65C00, var(--color-primary));
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: var(--color-bg);
+}
+
+/* Smoke Animation */
+@keyframes floatUp {
+  0% { transform: translateY(10vh) scale(1); opacity: 0; }
+  50% { opacity: 0.2; }
+  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+.smoke-particle {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  animation: floatUp 8s infinite linear;
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+/* Section Spacing */
+.section-padding {
+  padding: 80px 0;
+}
+
+.heading-impact {
+  font-family: var(--font-impact);
+  letter-spacing: 2px;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
