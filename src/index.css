@@ -123,7 +123,10 @@ button {
 .text-gradient {
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: var(--color-primary); /* Fallback color */
+  display: inline-block;
 }
 
 /* Mobile Responsiveness */
