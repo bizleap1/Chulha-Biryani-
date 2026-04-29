@@ -8,7 +8,7 @@ const About = () => {
       <div className="container section-padding">
         
         {/* Story Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+        <div className="grid-responsive" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
           
           <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h1 className="heading-impact" style={{ fontSize: '60px', marginBottom: '20px' }}>
@@ -35,7 +35,7 @@ const About = () => {
             <p style={{ color: 'var(--color-text-muted)' }}>How we bring the magic to your plate</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+          <div className="grid-responsive" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
             {[
               { step: '01', title: 'Marination', desc: 'Meats marinated for 12 hours in secret spices.' },
               { step: '02', title: 'Layering', desc: 'Basmati rice and meat layered carefully in Handi.' },

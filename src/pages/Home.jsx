@@ -138,8 +138,13 @@ const Home = () => {
       </section>
 
       {/* Stats Bar */}
-      <section style={{ backgroundColor: '#111', padding: '60px 0', borderBottom: '1px solid rgba(255,106,0,0.1)' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '40px' }}>
+      <section style={{ backgroundColor: '#111', padding: '40px 0', borderBottom: '1px solid rgba(255,106,0,0.1)' }}>
+        <div className="container responsive-flex" style={{ 
+          display: 'flex', 
+          justifyContent: 'space-around', 
+          flexWrap: 'wrap', 
+          gap: '30px'
+        }}>
           {[
             { num: '1760+', text: 'Happy Customers' },
             { num: '100%', text: 'Authentic Dum' },
@@ -228,7 +233,10 @@ const Home = () => {
               { icon: <Star size={40} />, title: 'Premium Spices', desc: 'Hand-picked whole spices blended to perfection.' },
               { icon: <Users size={40} />, title: 'Family Recipes', desc: 'Secret recipes passed down through generations.' }
             ].map((item, i) => (
-              <div key={i} style={{ textAlign: 'center', padding: '20px' }}>
+              <div key={i} className="mobile-card" style={{ 
+                textAlign: 'center', 
+                padding: '20px'
+              }}>
                 <div style={{ color: 'var(--color-primary)', marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
                   {item.icon}
                 </div>
