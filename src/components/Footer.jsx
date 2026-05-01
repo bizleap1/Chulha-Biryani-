@@ -41,6 +41,7 @@ const Footer = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <Link to="/menu" style={{ color: 'var(--color-text-muted)', transition: 'color 0.3s' }}>Explore Menu</Link>
               <Link to="/about" style={{ color: 'var(--color-text-muted)', transition: 'color 0.3s' }}>Our Story</Link>
+              <Link to="/franchise" style={{ color: 'var(--color-text-muted)', transition: 'color 0.3s' }}>Franchise</Link>
               <Link to="/contact" style={{ color: 'var(--color-text-muted)', transition: 'color 0.3s' }}>Contact Us</Link>
               <Link to="/order" style={{ color: 'var(--color-primary)', fontWeight: '600' }}>Order Now</Link>
             </div>

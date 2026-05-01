@@ -16,6 +16,23 @@ const Order = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleWhatsAppOrder = () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+    
+    let message = "Hello Chulha Biryani! 🥘\n\nI would like to place an order:\n\n";
+    cart.forEach(item => {
+      message += `- ${item.name} (x${item.quantity}): ₹${item.price * item.quantity}\n`;
+    });
+    message += `\n*Total Amount: ₹${totalPrice}*\n\n`;
+    message += "Please book the delivery via Porter. 🚚\n\nMy delivery details are:\nName: \nAddress: \nContact: ";
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/919876543210?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <div style={{ paddingTop: '120px', minHeight: '100vh', paddingBottom: '80px' }}>
       <div className="container">
@@ -39,9 +56,6 @@ const Order = () => {
           <h1 className="heading-impact" style={{ fontSize: '60px', marginBottom: '15px' }}>
             Review Your <span className="text-gradient">Selection</span>
           </h1>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '18px' }}>
-            Hot & fresh delivery in Nagpur within 30 mins 🚀
-          </p>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '50px', alignItems: 'start' }}>
@@ -106,7 +120,7 @@ const Order = () => {
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                     <span style={{ color: 'var(--color-text-muted)' }}>Delivery</span>
-                    <span style={{ color: '#00C853', fontWeight: 'bold' }}>FREE</span>
+                    <span style={{ color: '#00C853', fontWeight: 'bold' }}>Calculated on WhatsApp</span>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px', fontSize: '20px' }}>
                     <span style={{ fontWeight: 'bold' }}>Total</span>
@@ -117,7 +131,7 @@ const Order = () => {
             )}
           </div>
 
-          {/* Checkout Platforms */}
+          {/* Checkout Platform */}
           <div>
             <div style={{ 
               backgroundColor: '#161616', 
@@ -126,22 +140,34 @@ const Order = () => {
               border: '1px solid rgba(255,106,0,0.1)',
               marginBottom: '30px'
             }}>
-              <h2 style={{ fontSize: '24px', marginBottom: '25px', color: 'var(--color-secondary)' }}>Place Order Via</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                <motion.a whileHover={{ scale: 1.02 }} href="#" style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#FC8019', color: 'white', padding: '15px 25px', borderRadius: '8px', fontWeight: 'bold', fontSize: '18px' }}>
-                  <span>Swiggy</span> <span>→</span>
-                </motion.a>
-                <motion.a whileHover={{ scale: 1.02 }} href="#" style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#E23744', color: 'white', padding: '15px 25px', borderRadius: '8px', fontWeight: 'bold', fontSize: '18px' }}>
-                  <span>Zomato</span> <span>→</span>
-                </motion.a>
-                <motion.a whileHover={{ scale: 1.02 }} href="https://wa.me/919876543210" target="_blank" style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#25D366', color: 'white', padding: '15px 25px', borderRadius: '8px', fontWeight: 'bold', fontSize: '18px' }}>
-                  <span>WhatsApp Direct</span> <span>→</span>
-                </motion.a>
-              </div>
+              <h2 style={{ fontSize: '24px', marginBottom: '25px', color: 'var(--color-secondary)' }}>Place Order</h2>
               
-              <div style={{ marginTop: '25px', display: 'flex', gap: '10px', alignItems: 'center', color: 'var(--color-text-muted)', fontSize: '14px' }}>
-                <CheckCircle size={16} color="#00C853" />
-                <span>Express delivery in 30 mins</span>
+              <motion.button 
+                whileHover={{ scale: 1.02 }} 
+                onClick={handleWhatsAppOrder}
+                style={{ 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  alignItems: 'center',
+                  gap: '10px',
+                  backgroundColor: '#25D366', 
+                  color: 'white', 
+                  padding: '18px 25px', 
+                  borderRadius: '8px', 
+                  fontWeight: 'bold', 
+                  fontSize: '18px',
+                  width: '100%',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                Order via WhatsApp
+              </motion.button>
+              
+              <div style={{ marginTop: '20px', padding: '15px', backgroundColor: 'rgba(37, 211, 102, 0.1)', borderRadius: '8px', border: '1px dashed #25D366' }}>
+                <p style={{ color: '#fff', fontSize: '14px', lineHeight: '1.5' }}>
+                  Clicking the button will open WhatsApp with your cart details. <strong>Book a Porter for your delivery!</strong>
+                </p>
               </div>
             </div>
 

@@ -15,7 +15,7 @@ const About = () => {
               From <span className="text-gradient">Fire</span> to <span className="text-gradient">Flavor</span>
             </h1>
             <p style={{ fontSize: '18px', lineHeight: '1.8', color: 'var(--color-text-muted)', marginBottom: '20px' }}>
-              Chulha Biryani isn't just a restaurant; it's a revival of forgotten culinary heritage. We believe that modern cooking methods, while fast, strip away the soul of a true biryani.
+              Our journey started back in 2018. Chulha Biryani isn't just a restaurant; it's a revival of forgotten culinary heritage. We believe that modern cooking methods, while fast, strip away the soul of a true biryani.
             </p>
             <p style={{ fontSize: '18px', lineHeight: '1.8', color: 'var(--color-text-muted)' }}>
               That's why we went back to the roots. Real wood fire. Heavy bottom copper handis. Slow cooking over embers for hours. The result? A smoky, aromatic, and profoundly flavorful biryani that you simply cannot replicate on a gas stove.
