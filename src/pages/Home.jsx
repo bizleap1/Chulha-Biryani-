@@ -169,7 +169,7 @@ const Home = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
             {[
-              { name: 'Chicken Chulha Dum', price: '₹349', tag: '🔥 Most Ordered', img: '/images/chicken_chulha_dum.png' },
+              { name: 'Chicken Chulha Dum', price: '₹180', tag: '🔥 Most Ordered', img: '/images/chicken_chulha_dum.png' },
               { name: 'Mutton Royal Handi', price: '₹499', tag: '👑 Chef Special', img: '/images/mutton_royal_handi.png' },
               { name: 'Mutton Keema Dum', price: '₹549', tag: '⭐ Royal Choice', img: '/images/mutton_keema_dum.png' }
             ].map((dish, i) => (

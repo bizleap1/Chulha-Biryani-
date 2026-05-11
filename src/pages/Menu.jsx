@@ -11,7 +11,7 @@ const Menu = () => {
   const categories = ['All', 'Biryani', 'Mutton', 'Sides', 'Combos'];
 
   const menuItems = [
-    { id: 1, name: 'Chicken Chulha Dum', category: 'Biryani', price: 349, tag: '🔥 Most Ordered', spice: '🌶️🌶️', size: 'Serves 1-2', img: '/images/chicken_chulha_dum.png' },
+    { id: 1, name: 'Chicken Chulha Dum', category: 'Biryani', price: 180, tag: '🔥 Most Ordered', spice: '🌶️🌶️', size: '1 Plate', img: '/images/chicken_chulha_dum.png' },
     { id: 2, name: 'Mutton Royal Handi', category: 'Mutton', price: 499, tag: '👑 Chef Special', spice: '🌶️🌶️🌶️', size: 'Serves 2', img: '/images/mutton_royal_handi.png' },
     { id: 3, name: 'Special Chicken Tikka Biryani', category: 'Biryani', price: 399, tag: '🔥 New', spice: '🌶️🌶️', size: 'Serves 1-2', img: '/images/special_chicken_tikka.png' },
     { id: 8, name: 'Mutton Keema Dum Biryani', category: 'Mutton', price: 549, tag: 'Royal', spice: '🌶️🌶️🌶️', size: 'Serves 2', img: '/images/mutton_keema_dum.png' },
