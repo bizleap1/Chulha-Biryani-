@@ -6,23 +6,20 @@ const testimonials = [
   {
     name: "Rahul Sharma",
     role: "Food Blogger",
-    content: "The best authentic Biryani in Nagpur. The smoky flavor from the wood fire is something you won't find anywhere else. Pure bliss!",
-    rating: 5,
-    img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop"
+    content: "Quick delivery and the packaging keeps it hot. Their Salan and Raita are also very flavorful. Highly recommended for weekend treats!",
+    rating: 5
   },
   {
     name: "Priya Deshmukh",
     role: "Regular Customer",
-    content: "Quick delivery and the packaging keeps it hot. Their Salan and Raita are also very flavorful. Highly recommended for weekend treats!",
-    rating: 5,
-    img: "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?q=80&w=200&auto=format&fit=crop"
+    content: "I've tried almost every biryani place, but Chulha Biryani's Dum is on another level. The meat is so tender it falls off the bone.",
+    rating: 5
   },
   {
     name: "Amit Verma",
     role: "Tech Professional",
-    content: "I've tried almost every biryani place, but Chulha Biryani's Dum is on another level. The meat is so tender it falls off the bone.",
-    rating: 5,
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+    content: "The best authentic Biryani in Nagpur. The smoky flavor from the wood fire is something you won't find anywhere else. Pure bliss!",
+    rating: 5
   }
 ];
 
@@ -79,11 +76,6 @@ const Testimonials = () => {
               </p>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                <img 
-                  src={t.img} 
-                  alt={t.name} 
-                  style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover' }} 
-                />
                 <div>
                   <h4 style={{ fontSize: '18px', color: '#fff' }}>{t.name}</h4>
                   <p style={{ fontSize: '14px', color: 'var(--color-primary)' }}>{t.role}</p>
