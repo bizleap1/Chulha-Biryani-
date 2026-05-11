@@ -30,7 +30,7 @@ const Contact = () => {
                 <MapPin size={28} style={{ color: 'var(--color-primary)' }} />
                 <div>
                   <h4 style={{ fontSize: '18px', marginBottom: '5px' }}>Address</h4>
-                  <p style={{ color: 'var(--color-text-muted)', marginBottom: '10px' }}>123 Food Street, VIP Road,<br/>Nagpur, Maharashtra 440010</p>
+                  <p style={{ color: 'var(--color-text-muted)', marginBottom: '10px' }}>Manewada - Besa Rd, Besa,<br/>Besa Pipla, Maharashtra 440037</p>
                   <a 
                     href={directionsUrl} 
                     target="_blank" 
@@ -53,7 +53,7 @@ const Contact = () => {
                 <Phone size={28} style={{ color: 'var(--color-primary)' }} />
                 <div>
                   <h4 style={{ fontSize: '18px', marginBottom: '5px' }}>Phone</h4>
-                  <p style={{ color: 'var(--color-text-muted)' }}>+91 98765 43210</p>
+                  <p style={{ color: 'var(--color-text-muted)' }}>+91 75592 06277</p>
                 </div>
               </div>
 

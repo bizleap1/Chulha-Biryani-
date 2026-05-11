@@ -53,11 +53,11 @@ const Footer = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'var(--color-text-muted)' }}>
                 <MapPin size={20} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
-                <span>123 Food Street, VIP Road, Nagpur, Maharashtra</span>
+                <span>Manewada - Besa Rd, Besa, Besa Pipla, Maharashtra 440037</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--color-text-muted)' }}>
                 <Phone size={20} style={{ color: 'var(--color-primary)' }} />
-                <span>+91 98765 43210</span>
+                <span>+91 75592 06277</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--color-text-muted)' }}>
                 <Mail size={20} style={{ color: 'var(--color-primary)' }} />
