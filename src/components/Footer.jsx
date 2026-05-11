@@ -72,7 +72,7 @@ const Footer = () => {
             <p style={{ color: 'var(--color-text-muted)', marginBottom: '15px' }}>
               Subscribe for exclusive offers and secret menu drops!
             </p>
-            <form style={{ display: 'flex', gap: '10px' }}>
+            <form className="mobile-stack" style={{ display: 'flex', gap: '10px' }}>
               <input 
                 type="email" 
                 placeholder="Your email address" 
@@ -86,7 +86,7 @@ const Footer = () => {
                   outline: 'none'
                 }}
               />
-              <button type="submit" className="btn-primary" style={{ padding: '12px 20px', animation: 'none' }}>
+              <button type="submit" className="btn-primary" style={{ padding: '12px 20px', animation: 'none', width: 'auto' }}>
                 JOIN
               </button>
             </form>

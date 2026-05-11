@@ -53,7 +53,7 @@ const Order = () => {
           >
             🔥 Order Now Before It's Sold Out!
           </motion.div>
-          <h1 className="heading-impact" style={{ fontSize: '60px', marginBottom: '15px' }}>
+          <h1 className="heading-impact" style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '15px' }}>
             Review Your <span className="text-gradient">Selection</span>
           </h1>
         </div>

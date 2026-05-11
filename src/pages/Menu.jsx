@@ -35,7 +35,7 @@ const Menu = () => {
         background: 'linear-gradient(rgba(13,13,13,0.8), #0D0D0D), url("https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80") center/cover',
         borderBottom: '1px solid rgba(255,106,0,0.2)'
       }}>
-        <h1 className="heading-impact" style={{ fontSize: '60px', marginBottom: '15px' }}>Our <span className="text-gradient">Menu</span></h1>
+        <h1 className="heading-impact" style={{ fontSize: 'clamp(3rem, 8vw, 4rem)', marginBottom: '15px' }}>Our <span className="text-gradient">Menu</span></h1>
         <p style={{ color: 'var(--color-text-muted)', fontSize: '18px', maxWidth: '600px', margin: '0 auto' }}>
           Explore our range of authentic, wood-fire cooked dum biryanis and perfectly crafted sides.
         </p>

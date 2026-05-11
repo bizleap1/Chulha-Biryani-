@@ -85,11 +85,11 @@ const SmokeLoader = () => {
               repeat: Infinity,
               repeatType: "reverse"
             }}
-            style={{ textAlign: 'center', zIndex: 10 }}
+            style={{ textAlign: 'center', zIndex: 10, padding: '0 20px' }}
           >
             <h1 style={{ 
               fontFamily: 'var(--font-impact)', 
-              fontSize: '80px', 
+              fontSize: 'clamp(40px, 15vw, 80px)', 
               color: '#fff',
               letterSpacing: '5px',
               margin: 0,
@@ -99,8 +99,8 @@ const SmokeLoader = () => {
             </h1>
             <p style={{ 
               color: 'var(--color-secondary)', 
-              letterSpacing: '10px', 
-              fontSize: '14px', 
+              letterSpacing: 'clamp(5px, 2vw, 10px)', 
+              fontSize: 'clamp(10px, 3vw, 14px)', 
               marginTop: '10px',
               fontWeight: 'bold'
             }}>

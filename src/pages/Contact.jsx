@@ -11,10 +11,10 @@ const Contact = () => {
       <div className="container section-padding">
         
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h1 className="heading-impact" style={{ fontSize: '60px', marginBottom: '15px' }}>
+          <h1 className="heading-impact" style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '15px' }}>
             Get in <span className="text-gradient">Touch</span>
           </h1>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '18px' }}>
+          <p style={{ color: 'var(--color-text-muted)', fontSize: 'clamp(1rem, 2vw, 1.2rem)' }}>
             Have a question, bulk order, or catering inquiry? Let us know!
           </p>
         </div>
@@ -100,7 +100,7 @@ const Contact = () => {
         </div>
 
         {/* Map Embed */}
-        <div style={{ marginTop: '60px', width: '100%', height: '450px', backgroundColor: '#1A1A1A', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ marginTop: '60px', width: '100%', height: 'clamp(300px, 50vh, 450px)', backgroundColor: '#1A1A1A', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
           <iframe 
             src={mapUrl} 
             width="100%" 

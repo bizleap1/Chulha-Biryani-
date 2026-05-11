@@ -66,9 +66,9 @@ const About = () => {
             <div style={{ width: '60px', height: '4px', background: 'var(--color-primary)', margin: '20px auto' }}></div>
           </div>
 
-          <div style={{ position: 'relative', maxWidth: '900px', margin: '0 auto' }}>
+          <div className="timeline-container" style={{ position: 'relative', maxWidth: '900px', margin: '0 auto' }}>
             {/* Vertical Line */}
-            <div style={{ 
+            <div className="timeline-line" style={{ 
               position: 'absolute', 
               left: '50%', 
               top: 0, 
@@ -85,6 +85,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
+                className="timeline-item"
                 style={{ 
                   display: 'flex', 
                   justifyContent: i % 2 === 0 ? 'flex-start' : 'flex-end',
@@ -95,7 +96,7 @@ const About = () => {
                 }}
               >
                 {/* Year Marker */}
-                <div style={{ 
+                <div className="timeline-marker" style={{ 
                   position: 'absolute', 
                   left: '50%', 
                   transform: 'translateX(-50%)',
@@ -107,7 +108,7 @@ const About = () => {
                   zIndex: 2
                 }}></div>
 
-                <div style={{ 
+                <div className="timeline-content" style={{ 
                   width: '45%', 
                   backgroundColor: '#111', 
                   padding: '30px', 
@@ -128,6 +129,27 @@ const About = () => {
               </motion.div>
             ))}
           </div>
+
+          <style>{`
+            @media (max-width: 768px) {
+              .timeline-line {
+                left: 20px !important;
+                transform: none !important;
+              }
+              .timeline-marker {
+                left: 20px !important;
+                transform: translateX(-50%) !important;
+              }
+              .timeline-item {
+                justify-content: flex-start !important;
+                padding-left: 50px !important;
+              }
+              .timeline-content {
+                width: 100% !important;
+                text-align: left !important;
+              }
+            }
+          `}</style>
         </div>
 
         {/* Vision Section */}

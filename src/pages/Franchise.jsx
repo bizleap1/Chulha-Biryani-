@@ -145,14 +145,15 @@ const Franchise = () => {
       {/* Hero Section */}
       <section style={{ 
         position: 'relative', 
-        height: '80vh', 
+        minHeight: '70vh', 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center',
         background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${franchiseHero})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        padding: '120px 20px'
       }}>
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -160,15 +161,17 @@ const Franchise = () => {
           transition={{ duration: 0.8 }}
           className="container"
         >
-          <h1 className="heading-impact" style={{ fontSize: 'clamp(3rem, 8vw, 5rem)', marginBottom: '20px' }}>
+          <h1 className="heading-impact" style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', marginBottom: '20px' }}>
             PARTNER WITH <span className="text-gradient">SUCCESS</span>
           </h1>
-          <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 40px', color: 'var(--color-text-muted)' }}>
+          <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', maxWidth: '800px', margin: '0 auto 40px', color: 'var(--color-text-muted)' }}>
             Own a piece of the authentic smoky heritage. Join India's fastest-growing Biryani franchise network.
           </p>
-          <a href="#packages" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-            VIEW PACKAGES <ArrowRight size={20} />
-          </a>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <a href="#packages" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+              VIEW PACKAGES <ArrowRight size={20} />
+            </a>
+          </div>
         </motion.div>
       </section>
 
@@ -264,7 +267,7 @@ const Franchise = () => {
             <p style={{ color: 'var(--color-text-muted)' }}>Comprehensive breakdown of your investment and returns</p>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '50px' }}>
+          <div className="responsive-flex" style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginBottom: '50px' }}>
             <button 
               onClick={() => setActiveTab('investment')}
               style={{
@@ -273,7 +276,8 @@ const Franchise = () => {
                 border: '1px solid var(--color-primary)',
                 color: '#fff',
                 borderRadius: '30px',
-                transition: '0.3s'
+                transition: '0.3s',
+                width: 'auto'
               }}
             >
               Investment Breakdown
@@ -286,7 +290,8 @@ const Franchise = () => {
                 border: '1px solid var(--color-primary)',
                 color: '#fff',
                 borderRadius: '30px',
-                transition: '0.3s'
+                transition: '0.3s',
+                width: 'auto'
               }}
             >
               Financial Projections

@@ -56,6 +56,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="mobile-stack"
             style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}
           >
             <Link to="/order" className="btn-primary" style={{ padding: '15px 40px', fontSize: '18px' }}>
@@ -101,12 +102,12 @@ const Home = () => {
               Unlimited Biryani
             </h2>
             <div style={{ 
-              fontSize: 'clamp(24px, 5vw, 60px)', 
+              fontSize: 'clamp(24px, 12vw, 60px)', 
               fontFamily: 'var(--font-impact)',
               backgroundColor: '#fff', 
               color: 'var(--color-primary)',
               display: 'inline-block',
-              padding: '10px 40px',
+              padding: '10px clamp(20px, 5vw, 40px)',
               borderRadius: '8px',
               marginBottom: '20px',
               boxShadow: '0 15px 45px rgba(0,0,0,0.4)',
@@ -114,14 +115,14 @@ const Home = () => {
             }}>
               JUST ₹99/-
             </div>
-            <p style={{ fontSize: '20px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
+            <p style={{ fontSize: 'clamp(14px, 4vw, 20px)', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px', textShadow: '0 2px 10px rgba(0,0,0,0.2)', padding: '0 10px' }}>
               🔥 Exclusive Dine-In Offer • Pure Chulha Dum 🔥
             </p>
           </motion.div>
         </div>
         
         {/* Background Decorative Element */}
-        <div style={{
+        <div className="mobile-hide" style={{
           position: 'absolute',
           top: '50%',
           left: '50%',

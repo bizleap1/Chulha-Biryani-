@@ -14,10 +14,10 @@ const FloatingWhatsApp = () => {
       whileTap={{ scale: 0.9 }}
       style={{
         position: 'fixed',
-        bottom: '30px',
-        right: '30px',
-        width: '60px',
-        height: '60px',
+        bottom: 'clamp(20px, 5vw, 30px)',
+        right: 'clamp(20px, 5vw, 30px)',
+        width: 'clamp(50px, 12vw, 60px)',
+        height: 'clamp(50px, 12vw, 60px)',
         backgroundColor: '#25D366',
         color: 'white',
         borderRadius: '50%',
