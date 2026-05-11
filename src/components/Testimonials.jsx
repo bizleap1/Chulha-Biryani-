@@ -8,21 +8,21 @@ const testimonials = [
     role: "Food Blogger",
     content: "The best authentic Biryani in Nagpur. The smoky flavor from the wood fire is something you won't find anywhere else. Pure bliss!",
     rating: 5,
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+    img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop"
   },
   {
     name: "Priya Deshmukh",
     role: "Regular Customer",
-    content: "I've tried almost every biryani place, but Chulha Biryani's Dum is on another level. The meat is so tender it falls off the bone.",
+    content: "Quick delivery and the packaging keeps it hot. Their Salan and Raita are also very flavorful. Highly recommended for weekend treats!",
     rating: 5,
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+    img: "https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?q=80&w=200&auto=format&fit=crop"
   },
   {
     name: "Amit Verma",
     role: "Tech Professional",
-    content: "Quick delivery and the packaging keeps it hot. Their Salan and Raita are also very flavorful. Highly recommended for weekend treats!",
-    rating: 4,
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+    content: "I've tried almost every biryani place, but Chulha Biryani's Dum is on another level. The meat is so tender it falls off the bone.",
+    rating: 5,
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
   }
 ];
 
