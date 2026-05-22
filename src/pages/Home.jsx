@@ -170,9 +170,9 @@ const Home = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
             {[
-              { name: 'Chicken Chulha Dum', price: '₹180', tag: '🔥 Most Ordered', img: '/images/chicken_chulha_dum.png' },
-              { name: 'Mutton Royal Handi', price: '₹499', tag: '👑 Chef Special', img: '/images/mutton_royal_handi.png' },
-              { name: 'Mutton Keema Dum', price: '₹549', tag: '⭐ Royal Choice', img: '/images/mutton_keema_dum.png' }
+              { name: 'Unlimited Chicken Biryani', price: '₹99', tag: '🔥 Most Ordered', img: '/images/chicken_chulha_dum.png' },
+              { name: 'Mutton Biryani', price: '₹150 - ₹280', tag: '👑 Royal Choice', img: '/images/mutton_royal_handi.png' },
+              { name: 'Special Tandoori Chicken', price: '₹240 - ₹450', tag: '⭐ Chef Special', img: '/images/chicken_tandoori.png' }
             ].map((dish, i) => (
               <motion.div 
                 key={i}

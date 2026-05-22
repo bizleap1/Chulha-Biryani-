@@ -8,19 +8,61 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const { addToCart, totalItems } = useCart();
 
-  const categories = ['All', 'Biryani', 'Mutton', 'Sides', 'Combos'];
+  const categories = ['All', 'Biryani', 'Mutton', 'Tandoor & Sides'];
 
   const menuItems = [
-    { id: 1, name: 'Chicken Chulha Dum', category: 'Biryani', price: 180, tag: '🔥 Most Ordered', spice: '🌶️🌶️', size: '1 Plate', img: '/images/chicken_chulha_dum.png' },
-    { id: 2, name: 'Mutton Royal Handi', category: 'Mutton', price: 499, tag: '👑 Chef Special', spice: '🌶️🌶️🌶️', size: 'Serves 2', img: '/images/mutton_royal_handi.png' },
-    { id: 3, name: 'Special Chicken Tikka Biryani', category: 'Biryani', price: 399, tag: '🔥 New', spice: '🌶️🌶️', size: 'Serves 1-2', img: '/images/special_chicken_tikka.png' },
-    { id: 8, name: 'Mutton Keema Dum Biryani', category: 'Mutton', price: 549, tag: 'Royal', spice: '🌶️🌶️🌶️', size: 'Serves 2', img: '/images/mutton_keema_dum.png' },
-    { id: 4, name: 'Egg Dum Biryani', category: 'Biryani', price: 249, tag: '', spice: '🌶️🌶️', size: 'Serves 1', img: 'https://images.unsplash.com/photo-1543353071-087092ec393a?auto=format&fit=crop&q=80&w=600' },
-    { id: 5, name: 'Chicken 65', category: 'Sides', price: 220, tag: 'Crispy', spice: '🌶️🌶️', size: 'Serves 2', img: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&q=80&w=600' },
-    { id: 9, name: 'Chicken Tandoori', category: 'Sides', price: 280, tag: 'Wood-fired', spice: '🌶️🌶️', size: 'Half / Full', img: '/images/chicken_tandoori.png' },
-    { id: 10, name: 'Chicken Pakoda', category: 'Sides', price: 180, tag: 'Tea Time', spice: '🌶️', size: 'Serves 2', img: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&q=80&w=600' },
-    { id: 6, name: 'Couple Combo', category: 'Combos', price: 699, tag: 'Save 15%', spice: '🌶️🌶️', size: 'Serves 2', img: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=600', desc: '1 Chicken Biryani + 1 Starter + 2 Beverages' },
-    { id: 7, name: 'Family Pack Bucket', category: 'Combos', price: 1299, tag: '1KG Bucket', spice: '🌶️🌶️', size: 'Serves 4-5', img: 'https://images.unsplash.com/photo-1631515242808-497c3fbd3972?auto=format&fit=crop&q=80&w=600', desc: '1KG Chicken Biryani + 2 Starters + Raita + Salan + 4 Beverages' },
+    { id: 1, name: 'Unlimited Chicken Biryani', category: 'Biryani', price: 99, tag: '🔥 Special', spice: '🌶️🌶️', size: '2 Pcs + Unlimited Rice (Dine-in only)', img: '/images/chicken_chulha_dum.png', desc: 'Unlimited Regular Rice per person' },
+    { 
+      id: 2, name: 'Mutton Biryani', category: 'Mutton', tag: '👑 Royal', spice: '🌶️🌶️🌶️', img: '/images/mutton_royal_handi.png',
+      variants: [
+        { id: '2-half', size: 'Half', price: 150, name: 'Mutton Biryani (Half)' },
+        { id: '2-full', size: 'Full', price: 280, name: 'Mutton Biryani (Full)' }
+      ]
+    },
+    { 
+      id: 3, name: 'Chicken Biryani (Regular)', category: 'Biryani', tag: '', spice: '🌶️🌶️', img: 'https://images.unsplash.com/photo-1543353071-087092ec393a?auto=format&fit=crop&q=80&w=600',
+      variants: [
+        { id: '3-half', size: 'Half', price: 80, name: 'Chicken Biryani - Regular (Half)' },
+        { id: '3-full', size: 'Full', price: 150, name: 'Chicken Biryani - Regular (Full)' }
+      ]
+    },
+    { 
+      id: 4, name: 'Chicken Special Biryani', category: 'Biryani', tag: 'Davat Basmati', spice: '🌶️🌶️', img: '/images/special_chicken_tikka.png',
+      variants: [
+        { id: '4-half', size: 'Half', price: 100, name: 'Chicken Special Biryani (Half)' },
+        { id: '4-full', size: 'Full', price: 180, name: 'Chicken Special Biryani (Full)' }
+      ]
+    },
+    { 
+      id: 5, name: 'Chicken Pakoda', category: 'Tandoor & Sides', tag: 'Crispy', spice: '🌶️', img: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&q=80&w=600',
+      variants: [
+        { id: '5-half', size: 'Half', price: 60, name: 'Chicken Pakoda (Half)' },
+        { id: '5-full', size: 'Full', price: 120, name: 'Chicken Pakoda (Full)' }
+      ]
+    },
+    { 
+      id: 6, name: 'Chicken Lollipop', category: 'Tandoor & Sides', tag: 'Starts at ₹50', spice: '🌶️🌶️', img: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&q=80&w=600', desc: 'Per piece pricing',
+      variants: [
+        { id: '6-reg', size: 'Regular (1 Pc)', price: 50, name: 'Chicken Lollipop (Regular)' },
+        { id: '6-lrg', size: 'Large (1 Pc)', price: 60, name: 'Chicken Lollipop (Large)' }
+      ]
+    },
+    { 
+      id: 7, name: 'Tandoori Chicken', category: 'Tandoor & Sides', tag: 'Wood-fired', spice: '🌶️🌶️', img: '/images/chicken_tandoori.png',
+      variants: [
+        { id: '7-half', size: 'Half', price: 210, name: 'Tandoori Chicken (Half)' },
+        { id: '7-full', size: 'Full', price: 400, name: 'Tandoori Chicken (Full)' }
+      ]
+    },
+    { 
+      id: 8, name: 'Special Tandoori Chicken', category: 'Tandoor & Sides', tag: 'Chef Special', spice: '🌶️🌶️🌶️', img: '/images/chicken_tandoori.png',
+      variants: [
+        { id: '8-half', size: 'Half', price: 240, name: 'Special Tandoori Chicken (Half)' },
+        { id: '8-full', size: 'Full', price: 450, name: 'Special Tandoori Chicken (Full)' }
+      ]
+    },
+    { id: 9, name: 'Tandoori Whole Fish', category: 'Tandoor & Sides', price: 100, tag: 'Seafood', spice: '🌶️🌶️', size: '1 Piece', img: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=600' },
+    { id: 10, name: 'Boneless Tandoori Fish', category: 'Tandoor & Sides', price: 80, tag: 'Seafood', spice: '🌶️🌶️', size: '1 Piece', img: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&q=80&w=600' },
   ];
 
   const filteredItems = activeCategory === 'All' ? menuItems : menuItems.filter(item => item.category === activeCategory);
@@ -111,27 +153,47 @@ const Menu = () => {
               <div style={{ padding: '20px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
                   <h3 style={{ fontSize: '20px', fontFamily: 'var(--font-heading)' }}>{item.name}</h3>
-                  <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '20px' }}>₹{item.price}</span>
+                  <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '20px' }}>
+                    {item.variants ? `₹${item.variants[0].price} - ₹${item.variants[1].price}` : `₹${item.price}`}
+                  </span>
                 </div>
                 
                 <div style={{ display: 'flex', gap: '15px', marginBottom: '15px', fontSize: '14px', color: 'var(--color-text-muted)' }}>
                   <span>{item.spice} Spice</span>
-                  <span>•</span>
-                  <span>{item.size}</span>
+                  {item.size && (
+                    <>
+                      <span>•</span>
+                      <span>{item.size}</span>
+                    </>
+                  )}
                 </div>
 
                 {item.desc && (
                   <p style={{ color: 'var(--color-text-muted)', fontSize: '14px', marginBottom: '20px' }}>{item.desc}</p>
                 )}
                 
-                <div style={{ marginTop: 'auto', paddingTop: '20px' }}>
-                  <button 
-                    onClick={() => addToCart(item)}
-                    className="btn-primary" 
-                    style={{ display: 'block', textAlign: 'center', width: '100%', padding: '12px' }}
-                  >
-                    ADD TO CART
-                  </button>
+                <div style={{ marginTop: 'auto', paddingTop: '20px', display: 'flex', gap: '10px', flexDirection: 'column' }}>
+                  {item.variants ? (
+                    item.variants.map(variant => (
+                      <button 
+                        key={variant.id}
+                        onClick={() => addToCart({ ...item, ...variant })}
+                        className="btn-primary" 
+                        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '10px 15px', fontSize: '14px' }}
+                      >
+                        <span>ADD {variant.size.toUpperCase()}</span>
+                        <span>₹{variant.price}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <button 
+                      onClick={() => addToCart(item)}
+                      className="btn-primary" 
+                      style={{ display: 'block', textAlign: 'center', width: '100%', padding: '12px' }}
+                    >
+                      ADD TO CART
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
