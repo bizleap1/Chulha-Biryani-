@@ -102,6 +102,9 @@ const Footer = () => {
           fontSize: '14px'
         }}>
           <p>&copy; {new Date().getFullYear()} Chulha Biryani. All rights reserved.</p>
+          <p style={{ marginTop: '10px' }}>
+            Developed and Managed by <a href="https://bizleap.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 'bold' }}>BIZLEAP</a>
+          </p>
         </div>
       </div>
     </footer>
